@@ -1,4 +1,4 @@
-/**
+/*
  *  Proyecto 4: Problema del Agente Viajero(TSP)
  *  Fernando Alcantara Santana A01019595
  *  Prof: Dr. Víctor de la Cueva
@@ -27,7 +27,7 @@ public class TSP {
         
         problema.lecturaDatos("algo.txt", 1);    //Se inicializan las variables globales
         long inicio = System.nanoTime();    //medidor de tiempo (inicio)
-        problema.FB(1); //Se llama la función para la fuerza bruta y que empiece desde el elemento 1 del vector
+        problema.FB(0); //Se llama la función para la fuerza bruta y que empiece desde el elemento 1 del vector
         long termino = System.nanoTime();   //medidor de tiempo (fin)
         problema.imprimirResultado(inicio, termino);
         
@@ -169,7 +169,7 @@ public class TSP {
         determinaCamino(0, (int)Math.pow(2, no_ciudades)-2);    //Se obtiene el camino que seguirá el agente hasta volver a la ciudad incial
     }
     
-     public float determinaCosto(int inicio, int mascara)
+    public float determinaCosto(int inicio, int mascara)
     {
         int nuevaMascara, mascaraTemporal;  //Se crean variables que guarden las máscaras para encontrar las ciudades a visitar y obtener su costo posteriormente
         float res = -1;  //Se inicia la variable que guardará el costo más bajo a -1
